@@ -17,7 +17,6 @@
 
 // // pipelineDecission.decidePipeline(configMap)
 
-#!groovy
 @Library('roboshop-shared-library') _
 
 def configMap = [
@@ -25,7 +24,6 @@ def configMap = [
     component: "catalogue"
 ]
 
-// if not master branch then trigger pipeline
 if (!env.BRANCH_NAME.equalsIgnoreCase("master")) {
     pipelineDecission.decidePipeline(configMap)
 } else {
