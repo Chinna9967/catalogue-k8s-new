@@ -1,0 +1,6 @@
+# this is the meta data of our app
+apiVersion: v2
+name: catalogue
+version: 0.0.1 # this is the chart version
+description: This is the helm chart of mongodb
+appVersion: "1.0.0" # this version belongs to app
