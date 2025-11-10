@@ -8,7 +8,7 @@ def configMap = [
 env
 // this is .groovy file name and function inside it
 // if not master branch then trigger pipeline
-if( ! env.BRANCH_NAME.equalsignorecase('master')){
+if (BRANCH_NAME.equalsIgnoreCase("master")) {
 pipelineDecission.decidePipeline(configMap)
 }
 else{
