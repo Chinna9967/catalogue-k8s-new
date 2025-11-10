@@ -8,8 +8,8 @@ def configMap = [
 env
 // this is .groovy file name and function inside it
 // if not master branch then trigger pipeline
-if (BRANCH_NAME.equalsIgnoreCase("master")) {
-pipelineDecission.decidePipeline(configMap)
+if ( ! env.BRANCH_NAME.equalsIgnoreCase("master")) {
+    pipelineDecission.decidePipeline(configMap)
 }
 else{
     echo "master deployment should happen through cr only"
